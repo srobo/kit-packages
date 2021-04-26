@@ -1,0 +1,19 @@
+# Maintainer: Student Robotics Brain Team 
+# Contributor: Dan Trickey
+pkgname=srobo-kit
+pkgver=0.1.0
+pkgrel=1
+pkgdesc='Package set to define a SR Kit'
+url='https://github.com/srobo/kit-packages'
+arch=('any')
+license=('MIT')
+depends=(
+  # Python API
+  'python-sr-robot3' 'python-numpy'
+
+  # Kit Configuration Files
+  'srobo-config'
+
+  # Robot Control
+  'python-astoria'
+)
