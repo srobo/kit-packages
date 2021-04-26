@@ -1,0 +1,18 @@
+# Maintainer: Student Robotics Brain Team
+# Contributor: Dan Trickey
+pkgname=python-gmqtt
+pkgver=0.6.9
+pkgrel=1
+pkgdesc='Python MQTT v5.0 async client'
+arch=('any')
+url="https://github.com/wialon/gmqtt"
+license=('MIT')
+depends=('python')
+makedepends=('python-setuptools')
+source=('https://api.github.com/repos/wialon/gmqtt/tarball/v0.6.9')
+sha512sums=('040d91d300d0b2930c56c5b4fe0232f6f83033b65ae86f3488478694a1d7e9b2dd380deef9ea3e74aa1e67a74feea8009c6369f9b530059936c2e3618cfc6849')
+
+package() {
+  cd $(ls ${srcdir} | grep gmqtt)
+  python setup.py install --root="$pkgdir/" --optimize=1
+}
