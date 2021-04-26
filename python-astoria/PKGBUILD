@@ -1,0 +1,24 @@
+# Maintainer: Student Robotics Brain Team
+# Contributor: Dan Trickey
+pkgname=python-astoria
+pkgver=0.2.0
+pkgrel=1
+pkgdesc='Robot Management Systemd'
+arch=('any')
+url="https://github.com/srobo/astoria"
+license=('MIT')
+depends=('python' 'python-pydantic' 'python-click' 'python-dbus-next' 'python-gmqtt' 'python-toml' 'python-typing-extensions')
+makedepends=('python-setuptools' 'python-dephell')
+source=('https://api.github.com/repos/srobo/astoria/tarball/v0.2.0')
+sha512sums=('8a608a071c928e7d3e2f3a7da5fdf24093373bceeb18ea947085c472d253851e3224505a9cae0cfb64be5ed89b8afacd39ac67b30be506930b892f9147aa937f')
+
+prepare() {
+    cd $(ls ${srcdir} | grep astoria)
+    dephell deps convert --from pyproject.toml --to setup.py
+}
+
+package() {
+  cd $(ls ${srcdir} | grep astoria)
+  python setup.py install --root="$pkgdir/" --optimize=1
+}
+
