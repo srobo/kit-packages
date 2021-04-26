@@ -1,0 +1,23 @@
+# Maintainer: Student Robotics Brain Team
+# Contributor: Dan Trickey
+pkgname=python-sr-robot3
+pkgver=2021.0.0a0.dev0
+pkgrel=1
+pkgdesc='Student Robotics API'
+arch=('any')
+url="https://github.com/srobo/sr-robot3"
+license=('MIT')
+depends=('python' 'python-j5' 'python-pyserial' 'python-astoria')
+makedepends=('python-setuptools' 'python-dephell')
+source=('https://api.github.com/repos/srobo/sr-robot3/tarball/v2021.0.0a0.dev0')
+sha512sums=('451da9a14a4c7bc327b8b8abbc69acbc506785314444651b5164670f67b506d5b0cc58033c5d0f05d85e70019018a619f8771c88f439f67e9bbd01533c122793')
+
+prepare() {
+    cd $(ls ${srcdir} | grep sr-robot3)
+    dephell deps convert --from pyproject.toml --to setup.py
+}
+
+package() {
+  cd $(ls ${srcdir} | grep sr-robot3)
+  python setup.py install --root="$pkgdir/" --optimize=1
+}
