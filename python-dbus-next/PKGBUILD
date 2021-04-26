@@ -1,0 +1,18 @@
+# Maintainer: Student Robotics Brain Team
+# Contributor: Dan Trickey
+pkgname=python-dbus-next
+pkgver=0.2.2
+pkgrel=1
+pkgdesc='The next great DBus library for Python with asyncio support'
+arch=('any')
+url="https://github.com/altdesktop/python-dbus-next"
+license=('MIT')
+depends=('python')
+makedepends=('python-setuptools')
+source=('https://api.github.com/repos/altdesktop/python-dbus-next/tarball/v0.2.2')
+sha512sums=('59a7c28a18c869782effea014619f8c2e1057bb0ca5d25f3e5d8ff3fb9c040b7e3df3b88e49360a726ec5846c3e8b31801a03466c5221b86032a682379004d57')
+
+package() {
+  cd $(ls ${srcdir} | grep dbus-next)
+  python setup.py install --root="$pkgdir/" --optimize=1
+}
