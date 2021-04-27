@@ -3,22 +3,34 @@
 pkgname=python-astoria
 pkgver=0.2.0
 pkgrel=1
-pkgdesc='Robot Management Systemd'
+pkgdesc='Robot Management System'
 arch=('any')
 url="https://github.com/srobo/astoria"
 license=('MIT')
 depends=('python' 'python-pydantic' 'python-click' 'python-dbus-next' 'python-gmqtt' 'python-toml' 'python-typing-extensions' 'udisks2')
 makedepends=('python-setuptools' 'python-dephell')
-source=('https://api.github.com/repos/srobo/astoria/tarball/v0.2.0')
-sha512sums=('8a608a071c928e7d3e2f3a7da5fdf24093373bceeb18ea947085c472d253851e3224505a9cae0cfb64be5ed89b8afacd39ac67b30be506930b892f9147aa937f')
+source=('https://api.github.com/repos/srobo/astoria/tarball/v0.2.0'
+        'astdiskd.service'
+        'astmetad.service'
+        'astprocd.service'
+        'astoria.sysusers')
+sha512sums=('8a608a071c928e7d3e2f3a7da5fdf24093373bceeb18ea947085c472d253851e3224505a9cae0cfb64be5ed89b8afacd39ac67b30be506930b892f9147aa937f'
+            '7e8c261f7e7b26c7394a7826d5ec384f884de35184f1bc8d3108e3a4482c4591aba33363974832e5ebea6e8ed8c080c8fd60eb05f5bcc6888dbb1cfe6a60ee6e'
+            '6ae8c71e962e0f413431be5674ad91c72d668c8a8f5f4ec62d43464ab72560a356d9c5a27fb64af97a6ffa04a6dfc0afdd314ea3b8bcc8a3d4d42c7a6d2cd699'
+            'b68694cdcf8625e1ffae514263a4d6a4135b2d2f36ada507649efa1360a98a82880280ea3eee00dd27c2c9b0ff740a3cff7b2bbf9f55af448fd6067cf38eea07'
+            'd7aff0ab01f6a9fba75cedc9aa1fb50d1f9839cf64d69cd432e11f2604b3203098f8b70472a84c350d95351d821c0c2b70a8deda5d15e2d8fed4f93f81e2493a')
 
 prepare() {
-    cd $(ls ${srcdir} | grep astoria)
-    dephell deps convert --from pyproject.toml --to setup.py
+  cd $(ls ${srcdir} | grep srobo-astoria)
+  dephell deps convert --from pyproject.toml --to setup.py
 }
 
 package() {
-  cd $(ls ${srcdir} | grep astoria)
+  cd $(ls ${srcdir} | grep srobo-astoria)
   python setup.py install --root="$pkgdir/" --optimize=1
+  install -Dm644 ../astdiskd.service "$pkgdir/usr/lib/systemd/system/astdiskd.service"
+  install -Dm644 ../astmetad.service "$pkgdir/usr/lib/systemd/system/astmetad.service"
+  install -Dm644 ../astprocd.service "$pkgdir/usr/lib/systemd/system/astprocd.service"
+  install -Dm644 ../astoria.sysusers "$pkgdir/usr/lib/sysusers.d/astoria.conf"
 }
 

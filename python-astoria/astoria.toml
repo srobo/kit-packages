@@ -1,0 +1,10 @@
+[mqtt]
+host = "::1"
+port = 1883
+enable_tls = false
+force_protocol_version_3_1 = true
+topic_prefix = "astoria"
+
+[kit]
+name = "Student Robotics Kit"
+version = "0.0.0.0dev"
