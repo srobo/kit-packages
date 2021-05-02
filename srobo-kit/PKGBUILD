@@ -15,5 +15,5 @@ depends=(
   'srobo-config'
 
   # Robot Control
-  'python-astoria' 'mosquitto' 'udiskie' 'ntfs-3g'
+  'python-astoria' 'mosquitto' 'udiskie-minimal' 'ntfs-3g'
 )
