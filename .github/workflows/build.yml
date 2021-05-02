@@ -39,6 +39,7 @@ jobs:
           name: artifact-packages
           path: ${{ env.BUILD_DIR }}
   publish:
+    if: github.ref == 'refs/heads/master'
     needs: build
     runs-on: ubuntu-latest
     container:
