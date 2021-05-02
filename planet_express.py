@@ -14,7 +14,7 @@ PACKAGES: List[str] = [
     "python-astoria",
     "python-j5",
     "python-sr-robot3",
-    # "srobo-kit",
+    "srobo-kit",
 ]
 
 CURR_PATH = Path(".")
