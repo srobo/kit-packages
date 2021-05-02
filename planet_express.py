@@ -10,6 +10,7 @@ PACKAGES: List[str] = [
     "python-dbus-next",
     "python-gmqtt",
     "python-pyquaternion",
+    "udiskie-minimal",
     "python-astoria",
     "python-j5",
     "python-sr-robot3",
