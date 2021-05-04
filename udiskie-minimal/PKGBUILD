@@ -6,12 +6,12 @@
 
 pkgname=udiskie-minimal
 pkgver=2.3.3
-pkgrel=1
+pkgrel=2
 pkgdesc="Removable disk automounter using udisks"
 arch=("any")
 url="https://pypi.python.org/pypi/udiskie"
 license=("MIT")
-depends=("udisks2" "python" "python-gobject" "python-yaml")
+depends=("udisks2" "python" "python-gobject" "python-yaml" "python-docopt")
 makedepends=("python-setuptools")
 source=("udiskie-$pkgver.tar.gz::https://codeload.github.com/coldfix/udiskie/tar.gz/v$pkgver")
 sha256sums=('cebb758dbc8123ca945d5e135d85008aa51a10ac2fb3fa3f2fac12fc8a2663b5')
