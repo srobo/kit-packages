@@ -34,5 +34,6 @@ package() {
   install -Dm644 ../astmetad.service "$pkgdir/usr/lib/systemd/system/astmetad.service"
   install -Dm644 ../astprocd.service "$pkgdir/usr/lib/systemd/system/astprocd.service"
   install -Dm644 ../astoria.sysusers "$pkgdir/usr/lib/sysusers.d/astoria.conf"
+  install -Dm644 ../astoria.toml     "$pkgdir/etc/astoria.toml"
 }
 
