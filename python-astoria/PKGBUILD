@@ -2,7 +2,7 @@
 # Contributor: Dan Trickey
 pkgname=python-astoria
 pkgver=0.2.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Robot Management System'
 arch=('any')
 url="https://github.com/srobo/astoria"
