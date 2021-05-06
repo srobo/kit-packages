@@ -1,7 +1,7 @@
 # Maintainer: Student Robotics Brain Team 
 # Contributor: Dan Trickey
 pkgname=srobo-kit
-pkgver=0.1.0
+pkgver=0.1.1
 pkgrel=1
 pkgdesc='Package set to define a SR Kit'
 url='https://github.com/srobo/kit-packages'
@@ -11,12 +11,8 @@ depends=(
   # Python API
   'python-sr-robot3' 'python-numpy'
 
-  # Kit Configuration Files
-  # TODO: Re-add this once the package is made
-  #'srobo-config'
-
   # Robot Control
-  'python-astoria' 'mosquitto' 'udiskie-minimal' 'ntfs-3g'
+  'astoria-udiskie' 'mosquitto' 'ntfs-3g'
 
   # Common Python libraries
   'python-numpy'
