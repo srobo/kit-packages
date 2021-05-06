@@ -6,6 +6,8 @@ After=mosquitto.service
 [Service]
 ExecStart=/usr/bin/astprocd
 User=astoria
+Restart=on-failure
+RestartSec=5s
 
 [Install]
 WantedBy=multi-user.target

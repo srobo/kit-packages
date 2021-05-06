@@ -2,7 +2,7 @@
 # Contributor: Dan Trickey
 pkgname=python-astoria
 pkgver=0.2.0
-pkgrel=4
+pkgrel=5
 pkgdesc='Robot Management System'
 arch=('any')
 url="https://github.com/srobo/astoria"
@@ -16,9 +16,9 @@ source=('https://api.github.com/repos/srobo/astoria/tarball/v0.2.0'
         'astoria.sysusers'
         'astoria.toml')
 sha512sums=('8a608a071c928e7d3e2f3a7da5fdf24093373bceeb18ea947085c472d253851e3224505a9cae0cfb64be5ed89b8afacd39ac67b30be506930b892f9147aa937f'
-            '7e8c261f7e7b26c7394a7826d5ec384f884de35184f1bc8d3108e3a4482c4591aba33363974832e5ebea6e8ed8c080c8fd60eb05f5bcc6888dbb1cfe6a60ee6e'
-            '6ae8c71e962e0f413431be5674ad91c72d668c8a8f5f4ec62d43464ab72560a356d9c5a27fb64af97a6ffa04a6dfc0afdd314ea3b8bcc8a3d4d42c7a6d2cd699'
-            'b68694cdcf8625e1ffae514263a4d6a4135b2d2f36ada507649efa1360a98a82880280ea3eee00dd27c2c9b0ff740a3cff7b2bbf9f55af448fd6067cf38eea07'
+            '299d60bfa38944fca7e11caaee6b1be5820b4da977f0d75df85bfdcecd453ee3aeb03d6f9f8b77bb5a375bee4b5bfe2a2c1bf89b57de95780d9aeaa13d5480e9'
+            'bc89e7f21bfef8c22901a391985e224f015b0e37db5b0f6532e041b47a7c144dce0545a5e49681db4fd4b1ff3aa021cfbde37084e7800d91c9d09c77f66c1057'
+            'd133e229b29412807fcf465c33dfaded81bd8a80961ee9d8225fbaf06ef852cbbfc257eb998bb26e733df6fe83756f56af6cc6779668eef9796e5313fd3b792b'
             'd7aff0ab01f6a9fba75cedc9aa1fb50d1f9839cf64d69cd432e11f2604b3203098f8b70472a84c350d95351d821c0c2b70a8deda5d15e2d8fed4f93f81e2493a'
             'b74d510bf05ad6afb95d9602d7c9dd4f6e4ed6189a23bd3e5a7a53545ac6f0ec61d8e529f5fca5ff94c5d9fb17771d8f709378e576f033a1c001081d6eb0bc6c')
 
