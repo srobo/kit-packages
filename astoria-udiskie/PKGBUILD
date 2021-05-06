@@ -8,9 +8,16 @@ url='https://github.com/srobo/kit-packages'
 arch=('any')
 license=('MIT')
 depends=('python-astoria' 'udiskie-minimal')
-source=('50-udiskie.rules')
-sha512sums=('3a2f5592126fe047a832b4de9c7030e29e3085227d629689767d732839902c2b41673813b7cd08c5c507d7e06a17bd517a18e96d3229b5cc2c19923877dfdb2a')
+source=(
+    '50-udiskie.rules'
+    'astoria-udiskie.service'
+)
+sha512sums=(
+    '3a2f5592126fe047a832b4de9c7030e29e3085227d629689767d732839902c2b41673813b7cd08c5c507d7e06a17bd517a18e96d3229b5cc2c19923877dfdb2a'
+    '31568a4b8f023491b74d937518f6c0232eec7c336457a1528667f92a40dd79683a919a19f220c6243bcdab6833562d7b2b7fef21f20e3aaa7c897b676cd676bf'
+)
 
 package() {
   install -Dm644 50-udiskie.rules "$pkgdir/etc/polkit-1/rules.d/50-udiskie.rules"
+  install -Dm644 astoria-udiskie.service "$pkgdir/usr/lib/systemd/system/astoria-udiskie.service"
 }
