@@ -14,6 +14,7 @@ PACKAGES: List[str] = [
     "python-astoria",
     "python-j5",
     "python-sr-robot3",
+    "astoria-udiskie",
     "srobo-kit",
 ]
 

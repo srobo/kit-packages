@@ -1,0 +1,16 @@
+# Maintainer: Student Robotics Brain Team 
+# Contributor: Dan Trickey
+pkgname=astoria-udiskie
+pkgver=0.1.0
+pkgrel=1
+pkgdesc='Astoria config to use udiskie for automounting'
+url='https://github.com/srobo/kit-packages'
+arch=('any')
+license=('MIT')
+depends=('python-astoria' 'udiskie-minimal')
+source=('50-udiskie.rules')
+sha512sums=('3a2f5592126fe047a832b4de9c7030e29e3085227d629689767d732839902c2b41673813b7cd08c5c507d7e06a17bd517a18e96d3229b5cc2c19923877dfdb2a')
+
+package() {
+  install -Dm644 50-udiskie.rules "$pkgdir/etc/polkit-1/rules.d/50-udiskie.rules"
+}
