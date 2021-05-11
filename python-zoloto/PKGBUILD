@@ -7,7 +7,7 @@ pkgdesc='A fiducial marker system powered by OpenCV'
 arch=('any')
 url="https://github.com/RealOrangeOne/zolotO"
 license=('BSD')
-depends=('python' 'opencv' 'python-cached-property' 'python-quaternion')
+depends=('python' 'opencv' 'python-cached-property' 'python-pyquaternion')
 makedepends=('python-setuptools')
 source=('https://api.github.com/repos/RealOrangeOne/zoloto/tarball/0.6.1'
         'setup.patch')
