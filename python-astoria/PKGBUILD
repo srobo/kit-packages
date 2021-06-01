@@ -1,26 +1,28 @@
 # Maintainer: Student Robotics Brain Team
 # Contributor: Dan Trickey
 pkgname=python-astoria
-pkgver=0.2.0
-pkgrel=5
+pkgver=0.3.0
+pkgrel=1
 pkgdesc='Robot Management System'
 arch=('any')
 url="https://github.com/srobo/astoria"
 license=('MIT')
-depends=('python' 'python-pydantic' 'python-click' 'python-dbus-next' 'python-gmqtt' 'python-toml' 'python-typing-extensions' 'udisks2')
+depends=('hostapd' 'python' 'python-pydantic' 'python-click' 'python-dbus-next' 'python-gmqtt' 'python-toml' 'python-typing-extensions' 'udisks2')
 makedepends=('python-setuptools' 'python-dephell')
-source=('https://api.github.com/repos/srobo/astoria/tarball/v0.2.0'
+source=('https://api.github.com/repos/srobo/astoria/tarball/v0.3.0'
         'astdiskd.service'
         'astmetad.service'
         'astprocd.service'
+        'astwifid.service'
         'astoria.sysusers'
         'astoria.toml')
-sha512sums=('8a608a071c928e7d3e2f3a7da5fdf24093373bceeb18ea947085c472d253851e3224505a9cae0cfb64be5ed89b8afacd39ac67b30be506930b892f9147aa937f'
+sha512sums=('4f68142302e07ad94c3c2adb928c3074da8e95178c8506f27c6daeb30d474460046616d2f7fcfa26f3837a5433fcf21448f0019f39fd39a4503a6083f275e7b0'
             '299d60bfa38944fca7e11caaee6b1be5820b4da977f0d75df85bfdcecd453ee3aeb03d6f9f8b77bb5a375bee4b5bfe2a2c1bf89b57de95780d9aeaa13d5480e9'
             'bc89e7f21bfef8c22901a391985e224f015b0e37db5b0f6532e041b47a7c144dce0545a5e49681db4fd4b1ff3aa021cfbde37084e7800d91c9d09c77f66c1057'
             'd133e229b29412807fcf465c33dfaded81bd8a80961ee9d8225fbaf06ef852cbbfc257eb998bb26e733df6fe83756f56af6cc6779668eef9796e5313fd3b792b'
+            'b085ba3289e68fd3954360c07e0e24b928451367c85515f08223ff48d9b410f436118f9c67c99b60577fe06d4adfb6e07ab9606648de05110016600d0e61f421'
             'd7aff0ab01f6a9fba75cedc9aa1fb50d1f9839cf64d69cd432e11f2604b3203098f8b70472a84c350d95351d821c0c2b70a8deda5d15e2d8fed4f93f81e2493a'
-            'b74d510bf05ad6afb95d9602d7c9dd4f6e4ed6189a23bd3e5a7a53545ac6f0ec61d8e529f5fca5ff94c5d9fb17771d8f709378e576f033a1c001081d6eb0bc6c')
+            'fd5ca050eea6e91b121c02d6527547fac3a16544defe4f9d1c86aa4cf25dac994dac362f4732ae6733a60e57b4844c7abc8874b9a32e7e99cf45905e4b22ea92')
 
 prepare() {
   cd $(ls ${srcdir} | grep srobo-astoria)

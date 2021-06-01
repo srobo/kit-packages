@@ -8,3 +8,6 @@ topic_prefix = "astoria"
 [kit]
 name = "Student Robotics Kit"
 version = "0.0.0.0dev"
+
+[wifi]
+interface = "wlan0"
