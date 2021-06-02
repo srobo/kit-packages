@@ -2,7 +2,7 @@
 # Contributor: Dan Trickey
 pkgname=python-astoria
 pkgver=0.3.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Robot Management System'
 arch=('any')
 url="https://github.com/srobo/astoria"
@@ -35,6 +35,7 @@ package() {
   install -Dm644 ../astdiskd.service "$pkgdir/usr/lib/systemd/system/astdiskd.service"
   install -Dm644 ../astmetad.service "$pkgdir/usr/lib/systemd/system/astmetad.service"
   install -Dm644 ../astprocd.service "$pkgdir/usr/lib/systemd/system/astprocd.service"
+  install -Dm644 ../astwifid.service "$pkgdir/usr/lib/systemd/system/astwifid.service"
   install -Dm644 ../astoria.sysusers "$pkgdir/usr/lib/sysusers.d/astoria.conf"
   install -Dm644 ../astoria.toml     "$pkgdir/etc/astoria.toml"
 }
