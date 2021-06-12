@@ -1,28 +1,28 @@
 # Maintainer: Student Robotics Brain Team
 # Contributor: Dan Trickey
 pkgname=python-astoria
-pkgver=0.3.1
-pkgrel=3
+pkgver=0.4.0
+pkgrel=1
 pkgdesc='Robot Management System'
 arch=('any')
 url="https://github.com/srobo/astoria"
 license=('MIT')
 depends=('hostapd' 'python' 'python-pydantic' 'python-click' 'python-dbus-next' 'python-gmqtt' 'python-toml' 'python-typing-extensions' 'udisks2')
 makedepends=('python-setuptools' 'python-dephell')
-source=('https://api.github.com/repos/srobo/astoria/tarball/v0.3.1'
+source=('https://api.github.com/repos/srobo/astoria/tarball/v0.4.0'
         'astdiskd.service'
         'astmetad.service'
         'astprocd.service'
         'astwifid.service'
         'astoria.sysusers'
         'astoria.toml')
-sha512sums=('93aa22401e4383ee744d3182ff7e1ae98812f34435b4feecda812182e1202645e936db863893c44736c5eb29eb2e6aadf87c57406dc8d29d6983266c6a9c8bc1'
+sha512sums=('29a7bcfa10bcbde469ed1b952503153203e1834675ef6b12ae60d06b715ef7ecd1f57a7531fcd14c41481c673f1fa2c8c04cc4f6c38247cf8e35ef77256743d3'
             '299d60bfa38944fca7e11caaee6b1be5820b4da977f0d75df85bfdcecd453ee3aeb03d6f9f8b77bb5a375bee4b5bfe2a2c1bf89b57de95780d9aeaa13d5480e9'
             'bc89e7f21bfef8c22901a391985e224f015b0e37db5b0f6532e041b47a7c144dce0545a5e49681db4fd4b1ff3aa021cfbde37084e7800d91c9d09c77f66c1057'
             'd133e229b29412807fcf465c33dfaded81bd8a80961ee9d8225fbaf06ef852cbbfc257eb998bb26e733df6fe83756f56af6cc6779668eef9796e5313fd3b792b'
             'a812f6e03a7cd65e11484c7fbf540cca69ab357758e7b0ef4b81086ec79d15f034b8c31002384dd07148a0632f94cae61666aad5651f9f6e0ed4afb028763509'
             'd7aff0ab01f6a9fba75cedc9aa1fb50d1f9839cf64d69cd432e11f2604b3203098f8b70472a84c350d95351d821c0c2b70a8deda5d15e2d8fed4f93f81e2493a'
-            'a83bfc50c52eb00c86b0bb721e8dda6a620530032073f50a61261102be01e5c4510e8486002c63e202764c418eaf5ff0e446ed5119159d8016c41bc05cbebb9d')
+            'a2dd3f8ae082f7b25cbc2c9c527161dfea8a30d9493bc01cd6557c147a1654baa5de4a22a9ef740992af6dd18267bfbd942009dc85e7dd9390b70d668d361952')
 
 prepare() {
   cd $(ls ${srcdir} | grep srobo-astoria)
