@@ -1,7 +1,7 @@
 # Maintainer: Student Robotics Brain Team 
 # Contributor: Dan Trickey
 pkgname=srobo-kit
-pkgver=0.1.2
+pkgver=0.1.3
 pkgrel=1
 pkgdesc='Package set to define a SR Kit'
 url='https://github.com/srobo/kit-packages'
@@ -13,4 +13,6 @@ depends=(
 
   # Robot Control
   'astoria-udiskie' 'mosquitto' 'ntfs-3g'
+
+  'kit-filesystem'
 )
