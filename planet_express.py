@@ -16,6 +16,7 @@ PACKAGES: List[str] = [
     "python-j5",
     "python-sr-robot3",
     "astoria-udiskie",
+    "kit-filesystem",
     "srobo-kit",
 ]
 

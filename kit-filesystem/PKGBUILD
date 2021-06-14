@@ -1,0 +1,40 @@
+# Maintainer: Student Robotics Brain Team 
+# Contributor: Karina Kwiatek
+pkgname=kit-filesystem
+pkgver=2022.0.0.0
+pkgrel=1
+pkgdesc='Student Robotics Kit specific configuration files'
+url='https://github.com/srobo/kit-packages'
+arch=('any')
+license=('MIT')
+depends=('dnsmasq' 'filesystem' 'lighttpd' 'mosquitto' 'nftables' 'systemd')
+source=('br0.netdev'
+        'br0.network'
+        'dnsmasq.conf'
+        'eth0.network'
+        'issue'
+        'mosquitto.conf'
+        'motd'
+        'nftables.conf'
+        'resolv.conf')
+sha256sums=('1c01a0018c7ed024280a2466e6297246877dd94f61956ba2c33312e397fa63ef'
+            'd5f26a3177250577a6d3e5e945701a2c8f1f86d980386668074ff5ec057ea421'
+            '534d889b5d460f94a1696e2dbacce65395f2ad468b934e0641a306845894d0ee'
+            'c15c79a572c1eb8124ab92b7cc695fe20514b1239aabe9feb82b8eed91838388'
+            'c0b5d07f95e5b73f0973095607036ac1d1fe2f3c3a03c98c6556d3da9eb8778e'
+            '4a658a320c4c4590609170c7851f1da297d95dd8b1bad9c3228ecbeda9b7ce8f'
+            '8228de50cc970001663bf23cbeb9cfce5a05cc03f017c81da78d4f1d0d0a484d'
+            '9902fe579793cd4ed916acf7a0876321a35cc7e5a330e5890d5d5baddd3138f3'
+            '70ab9876891ac1e14d68be124a4c2defc7f6ed03f7ab33fc000f8e650a105e4d')
+
+package() {
+  install -Dm644 br0.netdev "$pkgdir/etc/systemd/network/br0.netdev"
+  install -Dm644 br0.network "$pkgdir/etc/systemd/network/br0.network"
+  install -Dm644 dnsmasq.conf "$pkgdir/etc/dnsmasq.conf"
+  install -Dm644 eth0.network "$pkgdir/etc/systemd/network/eth0.network"
+  install -Dm644 issue "$pkgdir/etc/issue"
+  install -Dm644 mosquitto.conf "$pkgdir/etc/mosquitto/mosquitto.conf"
+  install -Dm644 motd "$pkgdir/etc/motd"
+  install -Dm644 nftables.conf "$pkgdir/etc/nftables.conf"
+  install -Dm644 resolv.conf "$pkgdir/etc/resolv.conf"
+}
