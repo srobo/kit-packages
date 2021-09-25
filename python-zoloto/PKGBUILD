@@ -2,13 +2,12 @@
 # Contributor: Dan Trickey
 pkgname=python-zoloto
 pkgver=0.6.1
-pkgrel=2
+pkgrel=3
 pkgdesc='A fiducial marker system powered by OpenCV'
 arch=('any')
-url="https://github.com/RealOrangeOne/zolotO"
+url="https://github.com/RealOrangeOne/zoloto"
 license=('BSD')
-depends=('python' 'opencv' 'python-cached-property' 'python-pyquaternion')
-makedepends=('python-setuptools')
+depends=('python' 'opencv' 'python-opencv' 'python-cached-property' 'python-pyquaternion' 'python-setuptools')
 source=('https://api.github.com/repos/RealOrangeOne/zoloto/tarball/0.6.1'
         'setup.patch')
 sha512sums=('c198bb751607d525e17df5adac70d547189ba79dbb3d27404982dd543087f517b3b18dfab56d8170ff459178409c763e81d36ac5ce6ba4907afa44c386d0d6bc'
