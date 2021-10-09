@@ -24,6 +24,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - run: |
+          sudo pacman -S docker
+          systemctl start docker
       - uses: docker/setup-qemu-action@v1
         with:
           platforms: arm/v7
