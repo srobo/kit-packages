@@ -24,8 +24,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          sudo pacman -S docker
+      - name: Update system and install Docker
+        run: |
+          sudo pacman -Syu docker
           systemctl start docker
       - uses: docker/setup-qemu-action@v1
         with:
