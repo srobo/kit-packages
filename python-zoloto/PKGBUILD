@@ -1,22 +1,15 @@
 # Maintainer: Student Robotics Brain Team
 # Contributor: Dan Trickey
 pkgname=python-zoloto
-pkgver=0.6.1
-pkgrel=3
+pkgver=0.7.0
+pkgrel=1
 pkgdesc='A fiducial marker system powered by OpenCV'
 arch=('any')
 url="https://github.com/RealOrangeOne/zoloto"
 license=('BSD')
 depends=('python' 'opencv' 'python-opencv' 'python-cached-property' 'python-pyquaternion' 'python-setuptools')
-source=('https://api.github.com/repos/RealOrangeOne/zoloto/tarball/0.6.1'
-        'setup.patch')
-sha512sums=('c198bb751607d525e17df5adac70d547189ba79dbb3d27404982dd543087f517b3b18dfab56d8170ff459178409c763e81d36ac5ce6ba4907afa44c386d0d6bc'
-            '5a81faa47abd792b33c1fa2c9a0de9b5c30da710af8f5051fa9e423c11b6ae5816152ee1fa421fa429559d726eaea1fbea399c809547dd025ba421ebf821b91d')
-
-prepare() {
-  cd $(ls ${srcdir} | grep zoloto)
-  patch --forward --strip=1 --input="$srcdir/setup.patch"
-}
+source=("https://api.github.com/repos/RealOrangeOne/zoloto/tarball/$pkgver")
+sha512sums=('a6b8973ceadeb82253564f8f325bdd356a37688b3cf4c431223d5c7ac027b962257f80f585ee42654ca56f269fb56159494cac3ea3d795105cfee0e1c03254b2')
 
 package() {
   cd $(ls ${srcdir} | grep zoloto)
