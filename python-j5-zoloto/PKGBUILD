@@ -1,0 +1,24 @@
+# Maintainer: Student Robotics Kit Team
+# Contributor: Dan Trickey
+pkgname=python-j5-zoloto
+pkgver=0.1.0
+pkgrel=1
+pkgdesc='j5 integration for Zoloto Computer Vision '
+arch=('any')
+url="https://github.com/j5api/j5-zoloto"
+license=('MIT')
+depends=('python' 'python-j5' 'python-zoloto')
+optdepends=('python-zoloto')
+makedepends=('python-setuptools' 'python-dephell')
+source=("https://api.github.com/repos/j5api/j5-zoloto/tarball/v$pkgver")
+sha512sums=('0becd86ff241208cf6360ee3f0e97a0eda2deeb7780909d5ee7130dfb1e8e4e0e2b398ddcc9b7164b72fb6972b1cf73b2af0959946dd47ed29a4878ed8e23d0d')
+
+prepare() {
+    cd $(ls ${srcdir} | grep j5-zoloto)
+    dephell deps convert --from pyproject.toml --to setup.py
+}
+
+package() {
+  cd $(ls ${srcdir} | grep j5-zoloto)
+  python setup.py install --root="$pkgdir/" --optimize=1
+}

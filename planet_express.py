@@ -14,6 +14,7 @@ PACKAGES: List[str] = [
     "udiskie-minimal",
     "python-astoria",
     "python-j5",
+    "python-j5-zoloto",
     "python-sr-robot3",
     "astoria-udiskie",
     "srobo-kit",
