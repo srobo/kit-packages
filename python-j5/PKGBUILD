@@ -1,7 +1,7 @@
 # Maintainer: Student Robotics Brain Team
 # Contributor: Dan Trickey
 pkgname=python-j5
-pkgver=0.11.1
+pkgver=0.13.0
 pkgrel=1
 pkgdesc='j5 Robotics Framework'
 arch=('any')
@@ -11,7 +11,7 @@ depends=('python' 'python-pyusb' 'python-pyserial' 'python-cached-property' 'pyt
 optdepends=('python-zoloto')
 makedepends=('python-setuptools' 'python-dephell')
 source=("https://api.github.com/repos/j5api/j5/tarball/v$pkgver")
-sha512sums=('de5060579857a8f7d55f185011599b2ae3cb1550d5fb98d6f7d570d9173e8804ec33c1a3ab8ee33a94c42700eeee7dbf220a66a503793e8cb1bd4942e2db4783')
+sha512sums=('2f3b97091b6472e52a31506ca87f9b92da1f18cde543ecdf37e8df414da6218493d3b2d4264cb1486e51cdca28437c0d5ac423b5659570376b0b56edeadd973a')
 
 prepare() {
     cd $(ls ${srcdir} | grep j5)
