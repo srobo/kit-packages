@@ -1,22 +1,22 @@
 # Maintainer: Student Robotics Brain Team
 # Contributor: Dan Trickey
 pkgname=python-astoria
-pkgver=0.4.0
-pkgrel=2
+pkgver=0.5.0
+pkgrel=1
 pkgdesc='Robot Management System'
 arch=('any')
 url="https://github.com/srobo/astoria"
 license=('MIT')
 depends=('hostapd' 'python' 'python-pydantic' 'python-click' 'python-dbus-next' 'python-gmqtt' 'python-toml' 'python-typing-extensions' 'udisks2')
 makedepends=('python-setuptools' 'python-dephell')
-source=('https://api.github.com/repos/srobo/astoria/tarball/v0.4.0'
+source=("https://api.github.com/repos/srobo/astoria/tarball/v$pkgver"
         'astdiskd.service'
         'astmetad.service'
         'astprocd.service'
         'astwifid.service'
         'astoria.sysusers'
         'astoria.toml')
-sha512sums=('29a7bcfa10bcbde469ed1b952503153203e1834675ef6b12ae60d06b715ef7ecd1f57a7531fcd14c41481c673f1fa2c8c04cc4f6c38247cf8e35ef77256743d3'
+sha512sums=('11cb83fae5166fe533db8e4cf0c167ec058f476167a6d8b2276ec5525cb785364c308dc1d169996a3733bef974d45f8eda838bff2c90701b3d1eda38efa5d290'
             '299d60bfa38944fca7e11caaee6b1be5820b4da977f0d75df85bfdcecd453ee3aeb03d6f9f8b77bb5a375bee4b5bfe2a2c1bf89b57de95780d9aeaa13d5480e9'
             'bc89e7f21bfef8c22901a391985e224f015b0e37db5b0f6532e041b47a7c144dce0545a5e49681db4fd4b1ff3aa021cfbde37084e7800d91c9d09c77f66c1057'
             'd133e229b29412807fcf465c33dfaded81bd8a80961ee9d8225fbaf06ef852cbbfc257eb998bb26e733df6fe83756f56af6cc6779668eef9796e5313fd3b792b'
