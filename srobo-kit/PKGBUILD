@@ -1,12 +1,14 @@
 # Maintainer: Student Robotics Brain Team 
 # Contributor: Dan Trickey
 pkgname=srobo-kit
-pkgver=0.1.2
+pkgver=0.1.3
 pkgrel=1
 pkgdesc='Package set to define a SR Kit'
 url='https://github.com/srobo/kit-packages'
 arch=('any')
 license=('MIT')
+source=('10-srobo.rules')
+sha512sums=('476faeb23ec7dbfd9b5e0a8d89388c7916c6558116189ff348f46ac88bb5bfade5ccc91aecd04784dc6871e1ab414625e1ecffa08482846f22a18f44f6ed038d')
 depends=(
   # Python API
   'python-sr-robot3' 'python-zoloto' 'python-numpy'
@@ -14,3 +16,8 @@ depends=(
   # Robot Control
   'astoria-udiskie' 'mosquitto' 'ntfs-3g'
 )
+
+package() {
+  install -Dm644 ../10-srobo.rules "$pkgdir/usr/lib/udev/rules.d/10-srobo.rules"
+}
+
