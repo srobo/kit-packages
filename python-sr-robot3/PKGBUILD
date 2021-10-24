@@ -10,7 +10,7 @@ license=('MIT')
 depends=('python' 'python-j5' 'python-pyserial' 'python-astoria')
 makedepends=('python-setuptools' 'python-dephell')
 source=("https://api.github.com/repos/srobo/sr-robot3/tarball/v$pkgver")
-sha512sums=('d34f20e5508121bdc6bfd07a3b5e3a48d52c0d8eb0169bd596defa342ec39b92f7887e285c27d5cf8719aa96ab16ff6c2f58b2acfc5f2ef94be2f898086ba560')
+sha512sums=('b350a745ad227ef9d988c0d360796fc2f2df453dfd5befff93a0b6c3436f538080501ba8a8ad80771e667c7f951ec8d60a99f2efa0dda51fd5f501f513061d62')
 
 prepare() {
     cd $(ls ${srcdir} | grep sr-robot3)
