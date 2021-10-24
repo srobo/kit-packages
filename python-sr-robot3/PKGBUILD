@@ -1,8 +1,8 @@
 # Maintainer: Student Robotics Brain Team
 # Contributor: Dan Trickey
 pkgname=python-sr-robot3
-pkgver=2021.0.0a1
-pkgrel=2
+pkgver=2022.0.0a1
+pkgrel=1
 pkgdesc='Student Robotics API'
 arch=('any')
 url="https://github.com/srobo/sr-robot3"
