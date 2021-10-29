@@ -2,7 +2,7 @@
 # Contributor: Dan Trickey
 pkgname=python-astoria
 pkgver=0.6.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Robot Management System'
 arch=('any')
 url="https://github.com/srobo/astoria"
@@ -22,7 +22,7 @@ sha512sums=('3cd4be85a89b8db49cc96f938ddbbca6fe6a5aeaff95be121de2de79bf808275b17
             'd133e229b29412807fcf465c33dfaded81bd8a80961ee9d8225fbaf06ef852cbbfc257eb998bb26e733df6fe83756f56af6cc6779668eef9796e5313fd3b792b'
             'a812f6e03a7cd65e11484c7fbf540cca69ab357758e7b0ef4b81086ec79d15f034b8c31002384dd07148a0632f94cae61666aad5651f9f6e0ed4afb028763509'
             '20a7f8e693b42b1e211b0c094b89e80d455019c52a7a08539f7da4344866a54b887e4f565a5698a2c34f72a256a0414117602db0b7adbefd2366a66f426f63df'
-            'a2dd3f8ae082f7b25cbc2c9c527161dfea8a30d9493bc01cd6557c147a1654baa5de4a22a9ef740992af6dd18267bfbd942009dc85e7dd9390b70d668d361952')
+            'e488e1b5608f51a7faca6127419434d5042905ba7b3f7f1d5bda578262acdc90895988bd7739062e25c028becbb0ce2015762dd82e77883c2ba98acb3672151f')
 
 prepare() {
   cd $(ls ${srcdir} | grep srobo-astoria)
