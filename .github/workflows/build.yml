@@ -27,7 +27,6 @@ jobs:
       - name: Update system and install Docker
         run: |
           sudo pacman -Syu --noconfirm docker
-          systemctl start docker
       - uses: docker/setup-qemu-action@v1
         with:
           platforms: arm/v7
