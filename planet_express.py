@@ -19,6 +19,9 @@ PACKAGES: List[str] = [
     "srobo-kit",
 ]
 
+# temp
+PACKAGES: List[str] = ["uhubctl"]
+
 CURR_PATH = Path(".")
 BUILD_PATH = Path("/tmp/build")
 
