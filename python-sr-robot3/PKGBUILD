@@ -1,7 +1,7 @@
 # Maintainer: Student Robotics Brain Team
 # Contributor: Dan Trickey
 pkgname=python-sr-robot3
-pkgver=2022.0.0a1
+pkgver=2022.0.0a2
 pkgrel=1
 pkgdesc='Student Robotics API'
 arch=('any')
@@ -10,7 +10,7 @@ license=('MIT')
 depends=('python' 'python-j5' 'python-pyserial' 'python-astoria')
 makedepends=('python-setuptools' 'python-dephell')
 source=("https://api.github.com/repos/srobo/sr-robot3/tarball/v$pkgver")
-sha512sums=('b350a745ad227ef9d988c0d360796fc2f2df453dfd5befff93a0b6c3436f538080501ba8a8ad80771e667c7f951ec8d60a99f2efa0dda51fd5f501f513061d62')
+sha512sums=('dec8bd7eeed5c04c2ec5327974db8d285de78bf75c3c390dfcc8f77dd5cca4cd2c76fb0c9ed5c27973c63d2ee1c1b9e3132631213402fdea8aa116f30099c478')
 
 prepare() {
     cd $(ls ${srcdir} | grep sr-robot3)
